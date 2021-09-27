@@ -35,3 +35,35 @@ http://www.sii.cl/valores_y_fechas/uf/uf2019.htm.
 
 - En la documentación oficial, se puede conocer más sobre el método respond_to:
 https://api.rubyonrails.org/classes/ActionController/MimeResponds.html#method-i-respond_to.
+
+## Validaciones
+
+Para realizar las validaciones debe ejecutar **Postman** y desde ahí lanzar lo siguiente:
+
+**Consulta uf:**
+
+http://localhost:3000/ufs/<fecha_a_consultar>?x-client=<nombre_cliente>
+
+>Ejemplo:
+
+http://localhost:3000/ufs/06-02-2021?x-client=Felipe
+
+**Salida:**
+```
+{
+    "fecha_solicitada": "06-02-2021",
+    "valor": 29207.0
+}
+```
+**Cantidad de consultas:**
+
+http://localhost:3000/client/<nombre_cliente>
+
+>Ejemplo:
+
+http://localhost:3000/client/Felipe
+
+**Salida:**
+```
+Felipe ha hecho 4 consultas
+```
